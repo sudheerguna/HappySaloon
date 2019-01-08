@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="40dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/registration_bg"
+                                android:weightSum="1">
+
+                                <com.product.happysaloon.cview.NeoGramMEditText
+                                    android:id="@+id/et_telecode"
+                                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="0.3"
+                                    android:background="@null"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5dp"
+                                    android:text="Username"
+                                    android:textColor="@color/black_color" />
+
+                                <com.product.happysaloon.cview.NeoGramMEditText
+                                    android:id="@+id/et_phone"
+                                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/button_size"
+                                    android:layout_weight="0.7"
+                                    android:background="@null"
+                                    android:ems="10"
+                                    android:gravity="left|center"
+                                    android:hint="Mobile Number"
+                                    android:inputType="number"
+                                    android:maxLength="10"
+                                    android:paddingBottom="4dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="1dp"
+                                    android:singleLine="true"
+                                    android:text=""
+                                    android:textColor="@color/black_color"
+                                    android:textCursorDrawable="@drawable/black_cursor" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/registration_bg"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <com.product.happysaloon.cview.TypefaceTextview
+                                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:paddingLeft="5dp"
+                                android:text="Password"
+                                android:textColor="@color/black_color" />
+
+                            <com.product.happysaloon.cview.NeoGramMEditText
+                                android:id="@+id/etPassword"
+                                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/button_size"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="0.6"
+                                android:background="@null"
+                                android:gravity="left|center"
+                                android:hint="Password"
+                                android:inputType="textWebPassword"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="1dp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/black_color"
+                                android:textCursorDrawable="@drawable/black_cursor" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                            android:weightSum="1">
+
+                            <EditText
+                                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.25"
+                                android:backgroundTint="@color/black_color"
+                                android:clickable="false"
+                                android:gravity="center"
+                                android:text="+ 65"
+                                android:textColor="@color/black_color"
+                                android:textColorHint="@color/black_color" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/username_text_input_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.75"
+                                android:hint="@string/mbl_num"
+                                android:textColorHint="@color/black_color"
+                                android:theme="@style/TextLabel">
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:backgroundTint="@color/black_color"
+                                    android:ems="10"
+                                    android:gravity="left"
+                                    android:inputType="number"
+                                    android:textColor="@color/black_color"
+                                    android:textColorHint="@color/black_color"
+                                    android:textCursorDrawable="@drawable/black_cursor" />
+
+                            </android.support.design.widget.TextInputLayout>
+                        </LinearLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/username_text_input_layout_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/password"
+                            android:textColorHint="@color/black_color"
+                            android:theme="@style/TextLabel"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:backgroundTint="@color/black_color"
+                                android:ems="10"
+                                android:gravity="center"
+                                android:inputType="textWebPassword"
+                                android:textColor="@color/black_color"
+                                android:textColorHint="@color/black_color"
+                                android:textCursorDrawable="@drawable/black_cursor" />
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <com.product.happysaloon.cview.ButtonTypeface
+                            android:id="@+id/btn_login"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/button_size"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/button_bg"
+                            android:text="LOGIN"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white" />
+
+                        <com.product.happysaloon.cview.TypefaceTextview
+                            android:id="@+id/txt_forget_pwd"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="@string/forget_pwd"
+                            android:textColor="@color/black_color"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        android:id="@+id/dont_have_acc"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="Don't have an account yet?"
+                        android:textColor="@color/gray"
+                        android:visibility="visible" />
+
+                    <com.product.happysaloon.cview.ButtonTypeface
+                        android:id="@+id/btn_signup"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_size"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/button_bg"
+                        android:text="@string/sign_up"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

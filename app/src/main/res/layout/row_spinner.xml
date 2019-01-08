@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.product.happysaloon.cview.TypefaceTextview
+        android:id="@+id/txt_name"
+        style="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text="3"
+        android:textColor="@color/black_color" />
+
+</LinearLayout>

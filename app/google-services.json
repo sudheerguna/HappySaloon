@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "362001878351",
+    "firebase_url": "https://saloon-e355f.firebaseio.com",
+    "project_id": "saloon-e355f",
+    "storage_bucket": "saloon-e355f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362001878351:android:76b13a5534161c6f",
+        "android_client_info": {
+          "package_name": "com.product.happysaloon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362001878351-cg60a41b67c0qb044prmvdhfprre2p0f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.product.happysaloon",
+            "certificate_hash": "d6061ebdaf6c5ee17dce6a29ab9fa8430ab57740"
+          }
+        },
+        {
+          "client_id": "362001878351-uiveqekpfqpk3du583kr9nglavvqierq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdyVmUdCy321d9nibDv_WD2b22cC6g6WA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362001878351-uiveqekpfqpk3du583kr9nglavvqierq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

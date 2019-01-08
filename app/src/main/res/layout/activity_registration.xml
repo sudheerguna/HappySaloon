@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_homepage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:visibility="visible">
+
+                    <RadioButton
+                        android:id="@+id/rb_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:checked="true"
+                        android:paddingRight="10dp"
+                        android:text="User" />
+
+                    <RadioButton
+                        android:id="@+id/rb_merchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:paddingRight="10dp"
+                        android:text="Merchant" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Register"
+                        android:textColor="@color/black_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.3"
+                        android:gravity="left|center"
+                        android:text="Name"
+                        android:textColor="@color/black_color" />
+
+                    <com.product.happysaloon.cview.NeoGramMEditText
+                        android:id="@+id/et_Name"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:background="@null"
+                        android:backgroundTint="#000000"
+                        android:gravity="left|center"
+                        android:hint="Name"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="1dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_color"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.3"
+                        android:gravity="left|center"
+                        android:text="Email"
+                        android:textColor="@color/black_color" />
+
+                    <com.product.happysaloon.cview.NeoGramMEditText
+                        android:id="@+id/et_Email"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:background="@null"
+                        android:backgroundTint="#000000"
+                        android:gravity="left|center"
+                        android:hint="Email"
+                        android:inputType="textWebEmailAddress"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="1dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_color"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.3"
+                        android:gravity="left|center"
+                        android:text="Mobile"
+                        android:textColor="@color/black_color" />
+
+                    <com.product.happysaloon.cview.NeoGramMEditText
+                        android:id="@+id/et_mobile"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:background="@null"
+                        android:backgroundTint="#000000"
+                        android:gravity="left|center"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="1dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_color"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.3"
+                        android:gravity="left|center"
+                        android:text="Password"
+                        android:textColor="@color/black_color" />
+
+                    <com.product.happysaloon.cview.NeoGramMEditText
+                        android:id="@+id/et_pwd"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:background="@null"
+                        android:backgroundTint="#000000"
+                        android:gravity="left|center"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="1dp"
+                        android:singleLine="true"
+
+                        android:text=""
+                        android:textColor="@color/black_color"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.product.happysaloon.cview.TypefaceTextview
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.3"
+                        android:gravity="left|center"
+                        android:text="Confirm Password"
+                        android:textColor="@color/black_color" />
+
+                    <com.product.happysaloon.cview.NeoGramMEditText
+                        android:id="@+id/et_cnfm_pwd"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.7"
+                        android:background="@null"
+                        android:backgroundTint="#000000"
+                        android:gravity="left|center"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:maxLength="40"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="1dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_color"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_merchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/registration_bg"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="1">
+
+                        <com.product.happysaloon.cview.TypefaceTextview
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left|center"
+                            android:text="ShopId"
+                            android:textColor="@color/black_color" />
+
+                        <com.product.happysaloon.cview.NeoGramMEditText
+                            android:id="@+id/et_shopid"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@null"
+                            android:backgroundTint="#000000"
+                            android:gravity="left|center"
+                            android:hint="ShopId"
+                            android:inputType="text|number"
+                            android:maxLength="40"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black_color"
+                            android:textCursorDrawable="@drawable/black_cursor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/registration_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.product.happysaloon.cview.TypefaceTextview
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left|center"
+                            android:text="Reg date"
+                            android:textColor="@color/black_color" />
+
+                        <com.product.happysaloon.cview.NeoGramMEditText
+                            android:id="@+id/et_regdate"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@null"
+                            android:backgroundTint="#000000"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:gravity="left|center"
+                            android:hint="Reg date"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="40"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black_color"
+                            android:textCursorDrawable="@drawable/black_cursor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/registration_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.product.happysaloon.cview.TypefaceTextview
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left|center"
+                            android:text="Shop open time"
+                            android:textColor="@color/black_color" />
+
+                        <com.product.happysaloon.cview.NeoGramMEditText
+                            android:id="@+id/et_timefrom"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@null"
+                            android:backgroundTint="#000000"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:gravity="left|center"
+                            android:hint="Shoptime from"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="40"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black_color"
+                            android:textCursorDrawable="@drawable/black_cursor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/registration_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.product.happysaloon.cview.TypefaceTextview
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left|center"
+                            android:text="Shoptime"
+                            android:textColor="@color/black_color" />
+
+                        <com.product.happysaloon.cview.NeoGramMEditText
+                            android:id="@+id/et_timeto"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@null"
+                            android:backgroundTint="#000000"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:gravity="left|center"
+                            android:hint="Shoptime to"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="40"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black_color"
+                            android:textCursorDrawable="@drawable/black_cursor" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/registration_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <com.product.happysaloon.cview.TypefaceTextview
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0.3"
+                            android:gravity="left|center"
+                            android:text="No of Employees"
+                            android:textColor="@color/black_color" />
+
+                        <com.product.happysaloon.cview.NeoGramMEditText
+                            android:id="@+id/et_totalemployees"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            android:background="@null"
+                            android:backgroundTint="#000000"
+                            android:gravity="left|center"
+                            android:hint="No of Employees"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="1dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/black_color"
+                            android:textCursorDrawable="@drawable/black_cursor" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.product.happysaloon.cview.ButtonTypeface
+                    android:id="@+id/btn_create_Account"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg"
+                    android:gravity="center"
+                    android:text="CREATE ACCOUNT"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

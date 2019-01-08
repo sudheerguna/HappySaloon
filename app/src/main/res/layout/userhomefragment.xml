@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <com.product.happysaloon.cview.TypefaceTextview
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment List"
+            android:textColor="@color/black_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/borderline"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_appointmentlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:visibility="visible"></android.support.v7.widget.RecyclerView>
+
+            <com.product.happysaloon.cview.TypefaceTextview
+                android:id="@+id/txt_1"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="No Appointment List"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.product.happysaloon.cview.TypefaceTextview
+            style="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Appointment Availability"
+            android:textColor="@color/black_color" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.product.happysaloon.cview.TypefaceTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="Date" />
+
+            <com.product.happysaloon.cview.TypefaceTextview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="Emp Name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/registration_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <com.product.happysaloon.cview.NeoGramMEditText
+                        android:id="@+id/et_date"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="0.9"
+                        android:background="@null"
+                        android:backgroundTint="#000000"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:gravity="center|left"
+                        android:hint="Select Date"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="1dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/black_color"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.1"
+                        android:src="@mipmap/down_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/registration_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/registration_bg"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <Spinner
+                        android:id="@+id/spin_emplist"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.8"
+                        android:background="@drawable/registration_bg"
+                        android:gravity="center_vertical"
+                        android:hint="Month"
+                        android:paddingRight="10dp"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="0.2"
+                        android:src="@mipmap/down_arrow" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.product.happysaloon.cview.ButtonTypeface
+            android:id="@+id/btn_select"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:text="Submit"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/borderline"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_appointment_available"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"></android.support.v7.widget.RecyclerView>
+
+            <com.product.happysaloon.cview.TypefaceTextview
+                android:id="@+id/txt_2"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="No Appointment Availability" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.product.happysaloon.cview.ButtonTypeface
+                android:id="@+id/btn_fixappointment"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Fix Appointment"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
